@@ -4,17 +4,73 @@ This repository is a repository as a SchoolAPI meant for learning spring boot us
 
 # Documentation
 
-### A. Endpoint Student
+### A. Student
 #### 1. Add Data Student
+* **endpoint :** `/student`
+* **method   :** `POST`
+* **body :** <br>
+  ```css
+  "name" as "String"
+  "nim" as "String"
+  "email" as "String"
+  "gender" as "Char"
+  "department" as "String"
+  "yearOfEntry" as "Integer"
+  ```
+  
 #### 2. Add Multiple Data Student
+* **endpoint :** `/student/addAll`
+* **method   :** `POST`
+* **body :** <br>
+  ```css
+  [{
+  "name" as "String"
+  "nim" as "String"
+  "email" as "String"
+  "gender" as "Char"
+  "department" as "String"
+  "yearOfEntry" as "Integer"
+  }]
+  ```
+  
 #### 3. Get All Data Student
-#### 4. Get Student By Name
-#### 5. Get Student By Nim
-#### 6. Get Student By Year of Entry
-#### 7. Update Data Student
-#### 8. Delete Data Student
+* **endpoint :** `/student`
+* **method   :** `GET`
 
-### B. Endpoint Teacher
+#### 4. Get Student By Name
+* **endpoint :** `/student`
+* **method   :** `GET`
+* **params   :** `name`
+
+#### 5. Get Student By Nim
+* **endpoint :** `/student/getByNim/{nim}`
+* **method   :** `GET`
+
+#### 6. Get Student By Year of Entry
+* **endpoint :** `/student/{yearOfEntry}`
+* **method   :** `GET`
+
+#### 7. Update Data Student
+* **endpoint :** `/student`
+* **method   :** `PUT`
+* **body :** <br>
+  ```css
+  "_id" as "String"
+  "name" as "String"
+  "nim" as "String"
+  "email" as "String"
+  "gender" as "Char"
+  "department" as "String"
+  "yearOfEntry" as "Integer"
+  ```
+
+#### 8. Delete Data Student
+* **endpoint :** `/student/{_id}`
+* **method   :** `DELETE
+
+<br>
+
+### B. Teacher
 #### 1. Add Data Teacher
 #### 2. Add Multiple Data Teacher
 #### 3. Get All Data Teacher
@@ -23,7 +79,9 @@ This repository is a repository as a SchoolAPI meant for learning spring boot us
 #### 6. Delete Data Teacher
 #### 7. Delete Data Teacher By Age
 
-### C. Endpoint Class
+<br>
+
+### C. Class
 #### 1. Add Data Class
 #### 2. Get All Data Class
 #### 3. Get Class By Student Name
