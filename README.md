@@ -1,6 +1,6 @@
 # Spring-Boot-School-API
 
-This repository is a repository as a University API meant for learning spring boot using mongodb
+This repository is a repository as a SchoolAPI meant for learning spring boot using mongodb
 
 # Documentation
 
