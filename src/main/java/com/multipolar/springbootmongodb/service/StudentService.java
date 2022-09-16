@@ -31,7 +31,7 @@ public class StudentService {
     // TODO: add multiple data student
     public String addAllStudent(List<Student> student){
         studentsRepository.insert(student);
-        return student.size()+" new students added successfully";
+        return student.size() + " new students added successfully";
     }
 
     // TODO: get data student
@@ -68,7 +68,7 @@ public class StudentService {
     // TODO : delete data stduent
     public String deleteStudent(String id){
         studentsRepository.deleteById(id);
-        return "Student with id "+id+" removed!";
+        return "Student with id " +id + " removed!";
     }
 
 }

@@ -55,7 +55,7 @@ public class ClassService {
         classExist.setHomeroomTeacher(clas.getHomeroomTeacher());
         classRepository.save(classExist);
 
-        return "Homeroom teacher added successfully on class id "+clas.getId();
+        return "Homeroom teacher added successfully on class id " + clas.getId();
     }
 
     // TODO : update data class with list students
@@ -72,7 +72,7 @@ public class ClassService {
         classRepository.save(classExist);
 
         return clas.getStudentList().size()+
-                " student"+(clas.getStudentList().size() > 1 ? "s" : "") +
+                " student" + (clas.getStudentList().size() > 1 ? "s" : "") +
                 " add successfully";
     }
 
@@ -80,7 +80,7 @@ public class ClassService {
     public String deleteClass(String id){
         classRepository.deleteById(id);
 
-        return "Class with id "+id+" removed!";
+        return "Class with id " + id + " removed!";
     }
 
     // TODO : delete data student from list student in class
@@ -101,7 +101,7 @@ public class ClassService {
         // ? execute query update using mongotemplate
         mongoTemplate.updateFirst(query, update, Class.class);
 
-        return "Student with id "+idStudent+" removed from class id "+idClass;
+        return "Student with id " + idStudent + " removed from class id " + idClass;
     }
 
 }

@@ -16,4 +16,7 @@ public interface ClassRepository extends MongoRepository<Class, String> {
     @Query("{'homeroomTeacher.name' : ?0}")
     Class findByTeacherName(String teacherName);
 
+    @Query("{'homeroomTeacher._id': ?0}")
+    Class findByTeacherId(String id);
+
 }
